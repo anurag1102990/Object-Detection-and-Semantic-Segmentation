@@ -29,5 +29,6 @@ torchvision
 ### Installing
 A step by step series of examples that tell you how to get a development environment running:
 1. Clone the repo:
+      git clone https://github.com/anurag1102990/Object-Detection-and-Semantic-Segmentation.git
    
 
