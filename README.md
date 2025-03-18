@@ -43,6 +43,37 @@ To run the project:
       
 This script will load the data, initialize the UNet model, perform training, and display the results. Adjust parameters within main.py to experiment with different configurations.
 
+## Model Architecture
+
+This project leverages the UNet architecture, renowned for its effectiveness in semantic segmentation tasks, particularly in medical image analysis. The implementation is adapted for the MNIST Double Digits RGB dataset to perform both object detection and semantic segmentation.
+
+### UNet Structure
+
+- **Input Layer**: Accepts images with 3 channels (RGB) of size 64x64.
+- **Contracting Path**: 
+  - The first part of UNet consists of a series of convolutional and max pooling layers that reduce the spatial dimensions of the input while increasing the number of feature channels.
+  - This includes three contracting blocks, each comprising a convolution layer followed by batch normalization and ReLU activation, with max pooling to downsample the feature maps.
+  
+- **Bottleneck**:
+  - This part connects the contracting path to the expansive path and processes the feature map from the last contracting block to prepare it for upsampling.
+  
+- **Expansive Path**:
+  - The second half of the UNet architecture consists of upsampling layers coupled with convolution operations to increase the spatial dimensions and reduce the number of feature channels.
+  - Features from the contracting path are concatenated with the upsampled output at each level, allowing the network to use context information captured in the contracting path.
+  - This path includes three expansive blocks, each with upsampling followed by a series of convolutions and batch normalization.
+
+- **Output Layer**: 
+  - The final layer uses a convolution to map the multi-channel feature maps to the desired number of classes (11, including background), producing a pixel-wise classification of each part of the image.
+
+### Key Functionalities
+
+- **Dual Output**: The network is trained to output both bounding boxes for digit detection (using Intersection Over Union, IOU) and segmentation masks for each identified digit.
+- **Training**:
+  - Optimized using Adam optimizer with a learning rate of 1e-3.
+  - Loss calculations are performed using cross-entropy to compare the segmentation output with true labels.
+
+This architecture's design allows for precise segmentation and detection, crucial for accurately interpreting scenes with overlapping digits in varied conditions.
+
 ## Results
 
 The UNet model trained on the MNIST Double Digits RGB dataset demonstrated robust performance across multiple metrics, underscoring its effectiveness in handling complex image segmentation and detection tasks:
