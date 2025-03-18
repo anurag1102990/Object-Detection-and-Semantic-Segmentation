@@ -78,8 +78,8 @@ This architecture's design allows for precise segmentation and detection, crucia
 
 The UNet model trained on the MNIST Double Digits RGB dataset demonstrated robust performance across multiple metrics, underscoring its effectiveness in handling complex image segmentation and detection tasks:
 
-- **Classification Accuracy**: Achieved a remarkable 93% accuracy in classifying the correct digits within the images.
-- **Detection IOU (Intersection Over Union)**: Reached an impressive 82% in IOU, indicating a high degree of accuracy in detecting the correct bounding boxes around each digit.
-- **Segmentation Accuracy**: Attained 75% accuracy in pixel-wise segmentation, effectively distinguishing individual digits and segmenting them from the background and each other, even in cases of overlap.
+- **Classification Accuracy**: Achieved a remarkable **93% accuracy** in classifying the correct digits within the images.
+- **Detection IOU (Intersection Over Union)**: Reached an impressive **82% in IOU**, indicating a high degree of accuracy in detecting the correct bounding boxes around each digit.
+- **Segmentation Accuracy**: Attained **75% accuracy** in pixel-wise segmentation, effectively distinguishing individual digits and segmenting them from the background and each other, even in cases of overlap.
 
 These results showcase the capability of the system to not only identify and locate digits within images but also to precisely segment them, which is critical in applications requiring fine-grained analysis of visual data.
