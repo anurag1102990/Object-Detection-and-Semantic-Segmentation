@@ -20,15 +20,29 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install:
 
+```bash
 python >= 3.6
 numpy
 matplotlib
 torch
 torchvision
+```
 
 ### Installing
 A step by step series of examples that tell you how to get a development environment running:
 1. Clone the repo:
       git clone https://github.com/anurag1102990/Object-Detection-and-Semantic-Segmentation.git
-   
+
+### Usage
+To run the project:
+      python main.py
+      
+This script will load the data, initialize the UNet model, perform training, and display the results. Adjust parameters within main.py to experiment with different configurations.
+
+### Results
+The model achieves the following performance metrics:
+
+Accuracy: 80% on digit detection.
+Effective segmentation of overlapping digits with minimal errors.
+For detailed visual results, see the included images in the results/ directory.
 
