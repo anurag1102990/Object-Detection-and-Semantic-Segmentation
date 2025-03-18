@@ -16,7 +16,7 @@ The MNIST Double Digits RGB dataset poses unique challenges due to the presence 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+## Prerequisites
 
 What things you need to install:
 
@@ -28,14 +28,14 @@ torch
 torchvision
 ```
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you how to get a development environment running:
 1. Clone the repo:
    
       git clone https://github.com/anurag1102990/Object-Detection-and-Semantic-Segmentation.git
 
-### Usage
+## Usage
 
 To run the project:
 
